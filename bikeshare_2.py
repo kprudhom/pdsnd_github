@@ -239,7 +239,7 @@ def raw_data(df):
     
     
 def main():
-    check_start = True
+    check_start = True #loop until the user wants to stop
     while check_start == True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
@@ -250,8 +250,8 @@ def main():
         user_stats(df, city)
         raw_data(df)
 
-        check_restart = True
-        while check_restart == True:
+        check_restart = True 
+        while check_restart == True: #Loop until a valid response is entered
             restart = input('\nWould you like to restart? Enter yes or no.\n')
             if restart.lower() == 'no':   
                 check_restart = False
