@@ -215,13 +215,14 @@ def raw_data(df):
     loop_check = True
     index = 0
 
-    while loop_check == True:
+    while loop_check:
         raw = input("Would you like to see raw data? Y/N\n").capitalize()    
 
         if raw == "Y":
             print(df.loc[index + 1 : index + 5,:])
             index += 5
-            while loop_check == True:
+
+            while loop_check:
                 again = input("Would you like to see more data? Y/N\n").capitalize()
                 if again == "N":
                     loop_check = False
@@ -239,7 +240,7 @@ def raw_data(df):
     
 def main():
     check_start = True #loop until the user wants to stop
-    while check_start == True:
+    while check_start:
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
@@ -250,7 +251,7 @@ def main():
         raw_data(df)
 
         check_restart = True 
-        while check_restart == True: #Loop until a valid response is entered
+        while check_restart: #Loop until a valid response is entered
             restart = input('\nWould you like to restart? Enter yes or no.\n')
             if restart.lower() == 'no':   
                 check_restart = False
