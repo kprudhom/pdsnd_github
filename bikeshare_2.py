@@ -16,9 +16,9 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+    check = "" #default value
     while True:
         try:
-            check = "" #default value
             city = input("Would you like to explore data from Chicago, New York City or Washington?\n").title() #ask which city
             if city == "Chicago" or city == "New York City" or city == "Washington":
                 check = input("You have selected {}. Is that correct Y/N?\n".format(city)).capitalize() #confirming choice
