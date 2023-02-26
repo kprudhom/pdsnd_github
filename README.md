@@ -14,7 +14,7 @@ Data files:
 chicago.csv;
 new_york_city.csv;
 washington.csv
-Data provided by Motivate, a bike share system provider for many major citires in the United States.
+Data provided by Motivate, a bike share system provider for many major cities in the United States.
 
 ### Credits
 load_data formula used in the code was provided in the project practice problems (@Udacity course).
